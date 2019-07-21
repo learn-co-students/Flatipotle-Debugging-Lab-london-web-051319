@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 
-const ProteinForm = () => {
+class ProteinForm extends Component {
+  render () {
   return (
     <Fragment>
       <h1><label htmlFor="protein">Protein</label></h1>
@@ -11,9 +12,9 @@ const ProteinForm = () => {
               id="barbacoa"
               type="checkbox"
               value="Barbacoa"
-              name="protein"
-              checked={ props.protein.includes('Barbacoa') }
-              onChange={ props.handleChange }
+              name="protein"  
+              checked={ this.props.protein.includes('Barbacoa') }
+              onChange={ this.props.handleChange }
             />
             <img src={ require('../images/protein/barbacoa.png') } height="100px" width="100px" alt="barbacoa" />
             <label htmlFor="barbacoa">Barbacoa</label>
@@ -27,8 +28,8 @@ const ProteinForm = () => {
               type="checkbox"
               value="Steak"
               name="protein"
-              checked={ props.protein.includes('Steak') }
-              onChange={ props.handleChange }
+              checked={ this.props.protein.includes('Steak') }
+              onChange={ this.props.handleChange }
             />
             <img src={ require('../images/protein/steak.png') } height="100px" width="100px" alt="steak" />
             <label htmlFor="steak">Steak</label>
@@ -42,8 +43,8 @@ const ProteinForm = () => {
               type="checkbox"
               value="Chicken"
               name="protein"
-              checked={ props.protein.includes('Chicken') }
-              onChange={ props.handleChange }
+              checked={ this.props.protein.includes('Chicken') }
+              onChange={ this.props.handleChange }
             />
             <img src={ require('../images/protein/chicken.png') } height="100px" width="100px" alt="chicken" />
             <label htmlFor="chicken">Chicken</label>
@@ -57,8 +58,8 @@ const ProteinForm = () => {
               type="checkbox"
               value="Carnitas"
               name="protein"
-              checked={ props.protein.includes('Carnitas') }
-              onChange={ props.handleChange }
+              checked={ this.props.protein.includes('Carnitas') }
+              onChange={ this.props.handleChange }
             />
             <img src={ require('../images/protein/carnitas.png') } height="100px" width="100px" alt="carnitas" />
             <label htmlFor="carnitas">Carnitas</label>
@@ -72,8 +73,8 @@ const ProteinForm = () => {
               type="checkbox"
               value="Sofritas"
               name="protein"
-              checked={ props.protein.includes('Sofritas') }
-              onChange={ props.handleChange }
+              checked={ this.props.protein.includes('Sofritas') }
+              onChange={ this.props.handleChange }
             />
             <img src={ require('../images/protein/sofritas.png') } height="100px" width="100px" alt="sofritas" />
             <label htmlFor="sofritas">Sofritas</label>
@@ -82,6 +83,6 @@ const ProteinForm = () => {
       </div>
     </Fragment>
   )
-}
+}}
 
 export default ProteinForm
